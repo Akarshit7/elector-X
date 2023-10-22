@@ -1,6 +1,6 @@
 
 const protectedRoutes = [
-    '/pages/user-profile/',
+    '/pages/user-profile',
     '/pages/user-profile/new-orders.html',
     '/pages/checkout.html',
     '/pages/cart.html',
