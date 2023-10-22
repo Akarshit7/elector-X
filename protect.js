@@ -17,5 +17,5 @@ const protectedRoutes = [
 
 
 if(protectedRoutes.includes(location.pathname) && sessionStorage.getItem('login')!=='true'){
-    // location.replace(`${location.origin}/pages/login-signup.html`);
+    location.replace(`${location.origin}/pages/login-signup.html`);
 };
