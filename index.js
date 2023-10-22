@@ -2,7 +2,7 @@ import "./wrapper.js";
 
 import "./lib/easytimer/dist/easytimer.js";
 import "./lib/purecounter/purecounter.js";
-import "./lib/iziToast/iziToast.js";
+import "./lib/izitoast/izitoast.js";
 import categoriesData from "/data/categories_data.js";
 import subcategoriesData from "/data/sub_cat_data.js";
 import mobilePhoneData from "/data/mobile_phone_data.js";
