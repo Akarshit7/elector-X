@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electo-X | Account Main</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/protect.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="max-container user-profile">
+        <div class="user-profile__layout">
+          <div class="profile-card">
+            <a href="/pages/user-profile/index.html" class="profile-link"
+              >Account Main</a
+            >
+            <a href="/pages/user-profile/new-orders.html" class="profile-link"
+              >New Orders</a
+            >
+            <a
+              href="/pages/user-profile/orders-history.html"
+              class="profile-link"
+              >Orders History</a
+            >
+            <a href="/pages/user-profile/whishlist.html" class="profile-link"
+              >My Wishlist</a
+            >
+            <a href="/pages/user-profile/transactions.html" class="profile-link"
+              >Transactions</a
+            >
+            <a
+              href="/pages/user-profile/profile-settings.html"
+              class="profile-link"
+              >Profile Settings</a
+            >
+            <a href="/pages/user-profile/faq.html" class="profile-link selected"
+              >FAQ's</a
+            >
+            <a href="/" onclick="logout()" class="profile-link"
+              >Logout</a
+            >
+            
+          </div>
+          <div class="user-info-card">
+            <div class="user-info-header">
+              <div class="user-details">
+                <div class="user-name">FAQ's</div>
+              </div>
+            </div>
+            <hr class="user-info-hr" />
+            <pre class="faq__text"><span class="bolder">Saved UPI ID</span>
+<span class="bold">Why is my UPI ID being saved on <span class="blue">Electro-X</span>?</span>
+
+It's quicker. You can save the hassle of typing in the complete UPI information every time you shop at <span class="blue">Electro-X</span> by saving your UPI details. You can make your payment by selecting the saved UPI ID of your choice at checkout. While this is obviously faster, it is also very secure.
+
+<span class="bold">Is it safe to save my UPI ID on <span class="blue">Electro-X</span>?</span>
+
+Absolutely. Your UPI ID information is 100 percent safe with us. UPI ID details are non PCI compliant and are non confidential data.
+
+<span class="bold">What all UPI information does <span class="blue">Electro-X</span> store?</span>
+
+<span class="blue">Electro-X</span> only stores UPI ID and payment provider details. We do not store UPI PIN/MPIN.
+
+<span class="bold">Can I delete my UPI ID?</span>
+
+Yes, you can delete your UPI ID at any given time.
+
+<span class="bold">How many UPI IDs can I save on <span class="blue">Electro-X</span>?</span>
+
+You can save upto 10 IDs as of now
+
+<span class="bold">What all UPI IDs can be saved on <span class="blue">Electro-X</span>?</span>
+
+UPI IDs can be saved from any payment provider such as Gpay, Phonepe, Bhim etc.
+
+<span class="bold">How do I save my UPI ID(s) on <span class="blue">Electro-X</span>?</span>
+
+Your UPI IDs are saved automatically when you make a successful payment, by entering the UPI ID details while purchasing on <span class="blue">Electro-X</span>. Alternatively, Your UPI IDs are also saved when you make doorstep payment through UPI for COD orders.
+
+<span class="bold">How do I make a payment using a saved UPI ID?</span>
+
+You can view your saved UPI IDs on the preferred section on the payment options page at checkout. Select a saved UPI ID that you wish to use to make the payment. You will receive a push notification and/or SMS for the collect request. Once you accept the collect request, enter the UPI PIN / MPIN. You will get confirmation of the payment being successful on the <span class="blue">Electro-X</span> app/website.
+
+<span class="bold">How can I delete my UPI ID?</span>
+
+You can delete your saved UPI ID(s) through the My Account section. Navigate to “My Account > Payments > Saved UPI” and you will be able to view your saved UPI ID(s). You can now delete a saved ID by clicking on “Delete Icon”.
+
+<span class="bold">What are the prerequisites for using the saved UPI ID feature?</span>
+
+You should have a registered account with <span class="blue">Electro-X</span>. You should be logged in to your <span class="blue">Electro-X</span> account. Due to security reasons, this feature is not available during guest checkout.
+
+<span class="bold">I had opted to save my UPI at the time of payment but my UPI was not saved. Why?</span>
+
+If you had opted to save your UPI at the time of making the payment then the only scenario where your UPI may not get saved on <span class="blue">Electro-X</span> is when the UPI payment fails for the reason that the UPI ID was invalid. If the payment was successful and the UPI ID was not saved then you may contact us at cs@<span class="blue">Electro-X</span>.com for resolution of your problem.
+            </pre>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script defer type="module" src="/index.js"></script>
+  <script>
+    function logout(){
+      sessionStorage.removeItem('login');
+    }
+  </script>
+</html>

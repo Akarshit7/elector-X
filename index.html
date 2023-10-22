@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectoX | Home Page</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+    <link rel="stylesheet" href="/css/styles.css" />
+   
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <header class="header max-container">
+      <a href="/">
+        <img
+          class="header__logo"
+          src="./assets/images/site-icon/site-icon.png"
+          alt="website logo"
+        />
+      </a>
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__list-item"><a href="/">Home</a></li>
+          <li class="nav__list-item"><a href="/pages/categories.html">Categories</a></li>
+          <li class="nav__list-item">
+            <a href="/pages/about-us.html">About Us</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="/pages/login-signup.html">Login/Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__profile">
+        <div class="header__search">
+          <input placeholder="Search here...." ="search__input" type="text" id="searchKeyword" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <i class="fa-solid fa-bell"></i>
+        <a href="/pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="/pages/user-profile"><i class="nav__img-icon fa-regular fa-user"></i></a>
+        <a class="nav__img hidden" href="/pages/user-profile/">
+          <img src="/assets/images/trusted-vendors-photos/avtar-1.jpg" width="30" height="30" style="border-radius: 50%;">
+        </a>
+        <span class="nav__logout hidden" style='cursor: pointer;'>Logout</span>
+      </div>
+    </header>
+    <main>
+      <section class="display-products max-container">
+        <article class="hero-product">
+          <div class="hero-product__content">
+            <h3 class="hero-product__title">
+              Discover the perfect blend of innovation and style.
+            </h3>
+            <p class="hero-product__description">
+              Embracing the future of technology with our diverse range of
+              products designed to enhance your digital lifestyle.
+            </p>
+            <button class="btn btn--cta btn--hero">
+              <a href="./pages/product-page.html">Shop Now</a>
+            </button>
+          </div>
+          <div class="hero-product__image">
+            <img
+              class=""
+              src="./assets/images/display-section/SM105729AP.webp"
+              alt="iphone img"
+            />
+          </div>
+        </article>
+        <div class="display-products__side">
+          <article class="side-product-card">
+            <div class="side-product-card__image">
+              <img
+                src="./assets/images/display-section/apple-watch.webp"
+                alt="apple wat ch picture"
+              />
+            </div>
+            <div class="side-product-card__content">
+              <h4 class="side-product-card__title">Apple Watch</h4>
+              <p class="side-product-card__description">
+                Ultra with Ocean Band
+              </p>
+              <button class="btn btn--cta btn--cta--side">Add to Cart</button>
+            </div>
+          </article>
+          <article class="side-product-card">
+            <div class="side-product-card__image">
+              <img
+                src="./assets/images/display-section/game-controller.webp"
+                alt="controller picture"
+              />
+            </div>
+            <div class="side-product-card__content">
+              <h4 class="side-product-card__title">BSL Controller</h4>
+              <p class="side-product-card__description">Wireless Series 2</p>
+              <button class="btn btn--cta btn--cta--side">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="service-info max-container">
+        <article class="service-info-chip">
+          <div class="service-info-chip__icon">
+            <i class="fa-solid fa-user-gear" style="color: #ffffff"></i>
+          </div>
+          <div class="sservice-info-chip__content">
+            <h4 class="service-info__title">Online Support</h4>
+            <p class="service-info__desc">24 hours online support</p>
+          </div>
+        </article>
+        <article class="service-info-chip">
+          <div class="service-info-chip__icon">
+            <i class="fa-solid fa-truck" style="color: #ffffff"></i>
+          </div>
+          <div class="service-info-chip__content">
+            <h4 class="service-info__title">Free Delivery</h4>
+            <p class="service-info__desc">
+              Free Delivery on all orders within India
+            </p>
+          </div>
+        </article>
+        <article class="service-info-chip">
+          <div class="service-info-chip__icon">
+            <i class="fa-solid fa-wallet" style="color: #ffffff"></i>
+          </div>
+          <div class="service-info-chip__content">
+            <h4 class="service-info__title">Fund Refund</h4>
+            <p class="service-info__desc">Return guarantee within 7 days</p>
+          </div>
+        </article>
+      </section>
+      <section class="top-categories max-container">
+        <button class="btn btn--cta btn--label-title">Top Categories</button>
+        <div class="top-categories__container">
+          <div class="top-categories__card">
+            <div class="top-categories__image">
+              <img
+                src="./assets/images/categoreis/laptops.png"
+                alt=""
+              />
+            </div>
+            <h3 class="top-categories__title">Laptops</h3>
+          </div>
+          <div class="top-categories__card">
+            <div class="top-categories__image">
+              <img
+                src="./assets/images/categoreis/gaming.png"
+                alt=""
+              />
+            </div>
+            <h3 class="top-categories__title">Gaming</h3>
+          </div>
+          <div class="top-categories__card">
+            <div class="top-categories__image">
+              <img
+                src="./assets/images/trending-prod/smartwatch.png"
+                alt=""
+              />
+            </div>
+            <h3 class="top-categories__title">Smartwatches</h3>
+          </div>
+          <div class="top-categories__card">
+            <div class="top-categories__image">
+              <img
+                src="./assets/images/categoreis/tablets.png"
+                alt=""
+              />
+            </div>
+            <h3 class="top-categories__title">Tablets</h3>
+          </div>
+          <div class="top-categories__card">
+            <div class="top-categories__image">
+              <img
+                src="./assets/images/categoreis/airpods.png"
+                alt=""
+              />
+            </div>
+            <h3 class="top-categories__title">Airpods</h3>
+          </div>
+          <div class="top-categories__card">
+            <div class="top-categories__image">
+              <img
+                src="./assets/images/categoreis/powerbank.png"
+                alt=""
+              />
+            </div>
+            <h3 class="top-categories__title">PowerBanks</h3>
+          </div>
+          <div class="top-categories__card">
+            <div class="top-categories__image">
+              <img
+                src="./assets/images/categoreis/smartphone.png"
+                alt=""
+              />
+            </div>
+            <h3 class="top-categories__title">Phones</h3>
+          </div>
+          <div class="top-categories__card">
+            <div class="top-categories__image">
+              <img
+                src="./assets/images/categoreis/polarid.png"
+                alt=""
+              />
+            </div>
+            <h3 class="top-categories__title">Polaroids</h3>
+          </div>
+        </div>
+      </section>
+      <section class="sale max-container">
+        <div class="sale__content">
+          <h3 class="sale__title">Mania Sale</h3>
+          <p class="sale__desc">
+            Opportunity to snag discounts on your preferred
+            MacBook.Hurry,limited time offer!
+          </p>
+          <div class="sale__timer">
+            <div class="timer__card timer__card--hour">
+              <p id="hours">23</p>
+              <p>Hours</p>
+            </div>
+            <div class="timer__card timer_card--minute">
+              <p id="minutes">23</p>
+              <p>Minutes</p>
+            </div>
+            <div class="timer__card timer__card--second">
+              <p id="seconds">23</p>
+              <p>Seconds</p>
+            </div>
+          </div>
+          <button class="btn btn--cta btn--sale">Shop now</button>
+        </div>
+        <div class="sale__img">
+          <img src="./assets/images/sale-section/macbook_no_bg.png" alt="faf" />
+        </div>
+      </section>
+      <section class="trending-products max-container">
+        <button class="btn btn--cta btn--label-title">Trending Products</button>
+        <div class="trending-products__container">
+          <div class="trending-products__card">
+            <div class="trending-products__img">
+              <img
+                src="./assets/images/display-section/game-controller.webp"
+                alt=""
+              />
+            </div>
+            <div class="trending-products__content">
+              <h3 class="trending-products__title">PS5 Wireless Controller</h3>
+              <img class="trending-products__stars" src="" alt="" />
+              <h4 class="trending-products__price">9000</h4>
+            </div>
+          </div>
+          <div class="trending-products__card">
+            <div class="trending-products__img">
+              <img
+                src="./assets/images/trending-prod/ipad.png"
+                alt=""
+              />
+            </div>
+            <div class="trending-products__content">
+              <h3 class="trending-products__title">Apple Ipad Pro</h3>
+              <img class="trending-products__stars" src="" alt="" />
+              <h4 class="trending-products__price">9000</h4>
+            </div>
+          </div>
+          <div class="trending-products__card">
+            <div class="trending-products__img">
+              <img
+                src="./assets/images/trending-prod/samsungphone.png"
+                alt=""
+              />
+            </div>
+            <div class="trending-products__content">
+              <h3 class="trending-products__title">Samsung Galaxy Z Fold 4</h3>
+              <img class="trending-products__stars" src="" alt="" />
+              <h4 class="trending-products__price">9000</h4>
+            </div>
+          </div>
+          <div class="trending-products__card">
+            <div class="trending-products__img">
+              <img
+                src="./assets/images/trending-prod/smartwatch.png"
+                alt=""
+              />
+            </div>
+            <div class="trending-products__content">
+              <h3 class="trending-products__title">Series 4 Ultra Smartwatch</h3>
+              <img class="trending-products__stars" src="" alt="" />
+              <h4 class="trending-products__price">9000</h4>
+            </div>
+          </div>
+          <div class="trending-products__card">
+            <div class="trending-products__img">
+              <img
+                src="./assets/images/trending-prod/headphones.png"
+                alt=""
+              />
+            </div>
+            <div class="trending-products__content">
+              <h3 class="trending-products__title">Wireless Bluetooth headPhones</h3>
+              <img class="trending-products__stars" src="" alt="" />
+              <h4 class="trending-products__price">9000</h4>
+            </div>
+          </div>
+          <div class="trending-products__card">
+            <div class="trending-products__img">
+              <img
+                src="./assets/images/trending-prod/hp-laptop.png"
+                alt=""
+              />
+            </div>
+            <div class="trending-products__content">
+              <h3 class="trending-products__title">HP pavailion 15 Intel core i5</h3>
+              <img class="trending-products__stars" src="" alt="" />
+              <h4 class="trending-products__price">9000</h4>
+            </div>
+          </div>
+          <div class="trending-products__card">
+            <div class="trending-products__img">
+              <img
+                src="./assets/images/trending-prod/hisense-tv.png"
+                alt=""
+              />
+            </div>
+            <div class="trending-products__content">
+              <h3 class="trending-products__title">Hisense 43"Inch LED HD TV</h3>
+              <img class="trending-products__stars" src="" alt="" />
+              <h4 class="trending-products__price">9000</h4>
+            </div>
+          </div>
+          <div class="trending-products__card">
+            <div class="trending-products__img">
+              <img
+                src="./assets/images/trending-prod/gta5.png"
+                alt=""
+              />
+            </div>
+            <div class="trending-products__content">
+              <h3 class="trending-products__title">GTA 5</h3>
+              <img class="trending-products__stars" src="" alt="" />
+              <h4 class="trending-products__price">9000</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sale sale--two max-container">
+        <div class="sale__content">
+          <p class="sale__product">JBL BoomBox 2 Bluetooth speakers</p>
+          <h3 class="sale__title">Upto 20% discount</h3>
+          <p class="sale__desc sale__desc--small">
+            Enhance your music experience with unparalleled sound quality,
+            elevating both your music and your life.
+          </p>
+          <button class="btn btn--cta btn--sale">Shop now</button>
+        </div>
+        <div class="sale__img">
+          <img src="./assets/images/sale-section/jbl_boom_box.png" alt="faf" />
+        </div>
+      </section>
+      <section class="trusted-vendors max-container">
+        <div class="trusted-vendor__heading">
+          <div class="trusted-vendor__heading-icon">
+            <i class="fa-solid fa-award" style="color: #000000"></i>
+          </div>
+          <h2 class="title--black">
+            <span class="title--white">TRUSTED </span>VENDORS
+          </h2>
+        </div>
+        <div class="trusted-vendors__container">
+          <div class="card tv-card">
+            <div class="tv-card__img">
+              <img
+                src="/assets/images/trusted-vendors-photos/av1.png"
+                alt=""
+              />
+            </div>
+            <div class="tv-card__content">
+              <h3 class="tv-card__name">
+                Isaac Modu
+                <i class="fa-solid fa-circle-check" style="color: #005eff"></i>
+              </h3>
+
+              <p>
+                Established as a trusted vendor since 2018 with a verified track
+                record
+              </p>
+              <div class="tv-card__stars">
+                <span class="italic paragraph--green"
+                  >(97% Successful Trades)</span
+                >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card tv-card">
+            <div class="tv-card__img">
+              <img
+                src="/assets/images/trusted-vendors-photos/av2.png"
+                alt=""
+              />
+            </div>
+            <div class="tv-card__content">
+              <h3 class="tv-card__name">
+                Isaac Modu
+                <i class="fa-solid fa-circle-check" style="color: #005eff"></i>
+              </h3>
+
+              <p>
+                Established as a trusted vendor since 2018 with a verified track
+                record
+              </p>
+              <div class="tv-card__stars">
+                <span class="italic paragraph--green"
+                  >(97% Successful Trades)</span
+                >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card tv-card">
+            <div class="tv-card__img">
+              <img
+                src="/assets/images/trusted-vendors-photos/av3.png"
+                alt=""
+              />
+            </div>
+            <div class="tv-card__content">
+              <h3 class="tv-card__name">
+                Isaac Modu
+                <i class="fa-solid fa-circle-check" style="color: #005eff"></i>
+              </h3>
+
+              <p>
+                Established as a trusted vendor since 2018 with a verified track
+                record
+              </p>
+              <div class="tv-card__stars">
+                <span class="italic paragraph--green"
+                  >(97% Successful Trades)</span
+                >
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews max-container">
+        <button class="btn btn--cta btn--label-title">Customer Reviews</button>
+        <div class="review-card__container">
+          <div class="card review-card">
+            <div class="review-card__stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="review-card__desc">
+              I recently purchased a smartphone from this gadget store's
+              website, and I'm extremely happy with my experience.
+            </div>
+            <div class="review-card__img-name">
+              <img
+                class="review-card__img"
+                src="/assets/images/review/av1.png"
+                alt=""
+              />
+              <h3 class="review-card__name">John Thomas</h3>
+            </div>
+          </div>
+          <div class="card review-card">
+            <div class="review-card__stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="review-card__desc">
+              I recently purchased a smartphone from this gadget store's
+              website, and I'm extremely happy with my experience.
+            </div>
+            <div class="review-card__img-name">
+              <img
+                class="review-card__img"
+                src="/assets/images/review/av2.png"
+                alt=""
+              />
+              <h3 class="review-card__name">John Thomas</h3>
+            </div>
+          </div>
+          <div class="card review-card">
+            <div class="review-card__stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="review-card__desc">
+              I recently purchased a smartphone from this gadget store's
+              website, and I'm extremely happy with my experience.
+            </div>
+            <div class="review-card__img-name">
+              <img
+                class="review-card__img"
+                src="/assets/images/review/av3.png"
+                alt=""
+              />
+              <h3 class="review-card__name">John Thomas</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer max-container">
+      <div class="footer__container">
+        <h2 class="footer__heading">JOIN ELECTRO-X</h2>
+        <p class="footer__desc">
+          Subscribe to our newsletter today and let zonix be your ultimate
+          destination for staying informed, making informed purchase decisions,
+          and unlocking the full potential of the tech world.
+        </p>
+        <div class="footer-subscribe__container">
+          <input type="text" placeholder="Enter e-mail address" />
+          <button class="btn btn--cta btn--label-title btn--footer-label">
+            Subscribe
+          </button>
+        </div>
+        <div class="footer-links__container">
+          <div class="footer__icon-container">
+            <div>
+              <img src="./assets/images/site-icon/site-icon.png" alt="" />
+            </div>
+            <div class="icon--social-media">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+          <div class="list__container">
+            <label class="list__heading">Need Help</label>
+            <ul class="list__content">
+              <li>Help Center</li>
+              <li>Contact Us</li>
+              <li>Report products</li>
+              <li>Fund return policy</li>
+            </ul>
+          </div>
+          <div class="list__container">
+            <label class="list__heading">About Electo-X</label>
+            <ul class="list__content">
+              <li>About Us</li>
+              <li>Careers</li>
+              <li>Discount sales</li>
+            </ul>
+          </div>
+          <div><img src="/assets/images/footer/playsotre_app_store.png" alt="" width="250"></div>
+        </div>
+      </div>
+    </footer>
+    <script defer type="module" src="/index.js"></script>
+  </body>
+</html>

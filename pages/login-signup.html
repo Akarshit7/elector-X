@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electo-X | Login Signup</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    
+  </head>
+  <body>
+    <main>
+      <div class="login-signup">
+        <div class="login__card">
+          <div class="login__buttons">
+            <div class="login__btn-bg"></div>
+            <button
+              id="login__btn"
+              class="login__tggle-btn login__tggle-btn--selected"
+            >
+              Login in
+            </button>
+            <button id="signin__btn" class="login__tggle-btn">Sign up</button>
+          </div>
+          <div class="login__icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+          <form id="login-form" class="login__form">
+            <input
+              name="login__email"
+              class="login__form-field"
+              type="text"
+              placeholder="Enter your e-mail id"
+              required
+            />
+            <input
+              class="login__form-field"
+              type="password"
+              placeholder="Enter your password"
+              name="login__password"
+            />
+            <input type="checkbox" class="login__form-checkbox" />
+            <span>Remember Password</span>
+            <button class="btn btn--cta login__form-btn" type="submit">
+              Login
+            </button>
+          </form>
+          <form id="signup-form" class="login__form">
+            <input
+              name="signup__email"
+              class="login__form-field"
+              type="text"
+              placeholder="Enter your e-mail id"
+              required
+           
+            />
+            <input
+              name="signup__password"
+              class="login__form-field"
+              type="password"
+              placeholder="Enter your password"
+              
+            />
+            <input type="checkbox" class="login__form-checkbox" />
+            <span>I agree to the Terms and Conditions</span>
+            <button class="btn btn--cta login__form-btn" type="submit">
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script defer type="module" src="/index.js"></script>
+  <script src="/lib/izitoast/iziToast.min.js"></script>
+  <script>
+    const loginForm = document.getElementById("login-form");
+    const signUpForm = document.getElementById("signup-form");
+    const buttonBg = document.querySelector(".login__btn-bg");
+    const loginBtn = document.getElementById("login__btn");
+    const signInBtn = document.getElementById("signin__btn");
+    signInBtn.addEventListener("click", function () {
+      loginForm.style.left = "-400px";
+      signUpForm.style.left = "50px";
+      // buttonBg.style.left='unset';
+      buttonBg.style.left = "112px";
+      loginBtn.classList.toggle("login__tggle-btn--selected");
+      signInBtn.classList.toggle("login__tggle-btn--selected");
+    });
+    loginBtn.addEventListener("click", function () {
+      loginForm.style.left = "50px";
+      signUpForm.style.left = "550px";
+      buttonBg.style.left = "0px";
+      loginBtn.classList.toggle("login__tggle-btn--selected");
+      signInBtn.classList.toggle("login__tggle-btn--selected");
+    });
+
+
+
+    //login Signup
+    
+    
+    loginForm.addEventListener("submit", function (e) {
+      const loginData = new FormData(loginForm);
+      e.preventDefault();
+
+      if (sessionStorage.getItem("user")) {
+        const { email, password } = JSON.parse(sessionStorage.getItem("user"));
+      
+        if (
+          email === loginData.get("login__email") &&
+          password === loginData.get("login__password")
+        ) {
+          iziToast.success({
+            title: "OK",
+            message: "Login Successful",
+            timeout: 1000,
+            position: "bottomRight",
+          });
+          sessionStorage.setItem('login',true);
+          setTimeout(function () {
+            location.replace(`${location.origin}`);
+          }, 1200);
+        } else {
+          iziToast.error({
+            title: "Error",
+            message: "Login credentials are wrong",
+            timeout: 1500,
+            position: "bottomRight",
+          });
+        }
+      }else{
+        iziToast.error({
+          title:'Error',
+          message:'Make an account first',
+          timeout:1500,
+          position:'bottomRight',
+        })
+      }
+    });
+
+    signUpForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const signUpData = new FormData(signUpForm);
+      const email = signUpData.get("signup__email");
+      const password = signUpData.get("signup__password");
+      sessionStorage.setItem("user", JSON.stringify({ email, password }));
+      iziToast.success({
+        title: "OK",
+        message: "Sign Up Successful",
+        timeout: 1000,
+        position: "bottomRight",
+      });
+      setTimeout(function () {
+        location.reload();
+      }, 1200);
+    });
+  </script>
+</html>

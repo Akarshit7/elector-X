@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electo-X | Account Main</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/protect.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="max-container user-profile">
+        <div class="user-profile__layout">
+          <div class="profile-card">
+            <a href="/pages/user-profile/index.html" class="profile-link selected">Account Main</a>
+            <a href="/pages/user-profile/new-orders.html" class="profile-link">New Orders</a>
+            <a href="/pages/user-profile/orders-history.html" class="profile-link">Orders History</a>
+            <a href="/pages/user-profile/whishlist.html" class="profile-link">My Wishlist</a>
+            <a href="/pages/user-profile/transactions.html" class="profile-link">Transactions</a>
+            <a href="/pages/user-profile/profile-settings.html" class="profile-link">Profile Settings</a>
+            <a href="/pages/user-profile/faq.html" class="profile-link"
+              >FAQ's</a
+            >
+            <a href="/" class="profile-link" onclick="logout()">Logout</a>
+          </div>
+          <div class="user-info-card">
+            <div class="user-info-header">
+              <div class="user-image-container">
+                <img src="/assets/images/trusted-vendors-photos/avtar-1.jpg" alt="User Image" class="user-image" />
+              </div>
+              <div class="user-details">
+                <div class="user-name">John Doe</div>
+                <div class="user-sub-details">
+                  <div class="user-email">Email: john.doe@example.com</div>
+                  <div class="user-phone">Phone: 1234567890</div>
+                </div>
+              </div>
+            </div>
+            <hr class="user-info-hr" />
+            <h3 class="delivery-address-heading">Delivery Address</h3>
+            <div class="address-cards">
+              <div class="address-card">
+                <div class="address-image-container">
+                  <img
+                    src="/assets/images/profile/red-pin-point-location-symbol-isolated-white-background_120819-396.avif"
+                    alt="Address Image"
+                    class="address-image"
+                  />
+                </div>
+                <div class="address-details">
+                  <div class="address-text">123 Main Street</div>
+                  <div class="address-type">(Primary Address)</div>
+                </div>
+              </div>
+              <!-- Add another similar address-card here if needed -->
+            </div>
+            <button class="btn btn--cta btn--cta--side btn--outline account-main-button">+ Add New Address</button>
+            <hr class="user-info-hr" />
+            <h3 class="payment-methods-heading">Payment Methods</h3>
+            <div class="payment-cards">
+              <div class="payment-card">
+                <div class="payment-image-container">
+                  <img
+                    src="/assets/images/payment/visa_logo.jpg"
+                    alt="Card Image"
+                    class="payment-image"
+                  />
+                </div>
+                <div class="payment-details">
+                  <div class="card-number">*****45730</div>
+                  <div class="expires-text">Expires on 7/25</div>
+                </div>
+              </div>
+              <!-- Add another similar payment-card here if needed -->
+            </div>
+            <button class="btn btn--cta btn--cta--side btn--outline account-main-button">+ Add Payment Method</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  
+  <script defer type="module" src="/index.js"></script>
+<script>
+  function logout(){
+    sessionStorage.removeItem('login');
+  }
+</script>
+</html>

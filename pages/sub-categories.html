@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectroX | Sub Categories</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>  
+    <main>
+      <section class="max-container sub-cat">
+        <div class="categories__title">
+          <h2>Sub Categories Page:</h2>
+          <p>Home <span> / </span> Categories <span> / </span> Mobile Phones</p>
+        </div>
+        <div class="sub-cat__grid">
+          <div class="sub-cat__filters">
+            <div class="sub-cat__more-categories">
+              <h3 class="sub-cat__filter-title">More Categories</h3>
+              <p>Samsung</p>
+              <p>POCO</p>
+              <p>MI</p>
+              <p>Apple</p>
+            </div>
+            <div class="sub-cat__internal-storage">
+              <h3 class="sub-cat__filter-title">Price Range</h3>
+              <div>
+                <input type="checkbox" name="" id="1" />5000 and below
+              </div>
+              <div>
+                <input type="checkbox" name="" id="6kfilter" />6000 to 8000
+              </div>
+              <div>
+                <input type="checkbox" name="" id="10kfilter" />10000 to 15000
+              </div>
+              <div>
+                <input type="checkbox" name="" id="1" />15000 and above
+              </div>
+            </div>
+            <div>
+              <h3 class="sub-cat__filter-title">Price range</h3>
+              <div class="slider__wrapper">
+                <div class="slider__values">
+                  <span id="range1"> 0 </span>
+                  <span> &dash; </span>
+                  <span id="range2"> 100 </span>
+                </div>
+                <div class="range-conatiner">
+                  <div class="range__slider-track"></div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="10000"
+                    value="3000"
+                    id="slider-1"
+                    oninput="slideOne()"
+                  />
+                  <input
+                    type="range"
+                    min="0"
+                    max="10000"
+                    value="7000"
+                    id="slider-2"
+                    oninput="slideTwo()"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="sub-cat__ratings-filter">
+              <h3 class="sub-cat__filter-title">Ratings</h3>
+              <div>
+                <input type="checkbox" /> <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <input type="checkbox" name="" id="" />
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <input type="checkbox" name="" id="" />
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <input type="checkbox" name="" id="" />
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <input type="checkbox" name="" id="" />
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            
+          </div>
+          <div class="sub-cat__products">
+            <div class="sub_cat__right-side-top">
+              <p>30 products found</p>
+              <div>
+                <select>
+                  <option value="Price">Sort By Price</option>
+                  <option value="stars">Sort by Stars</option>
+                  <option value="Ratings">Sort by Ratings</option>
+                </select>
+              </div>
+            </div>
+            <div class="sub-cat__prod">
+              
+                <!-- <div class="sub-cat__prod-card">
+                  <a href="/pages/product-page.html">
+                  <div class="sub-cat__prod-img">
+                    <img
+                      src="../assets/images/display-section/apple-watch.webp"
+                      alt=""
+                    />
+                  </div>
+                </a>
+                  <div class="sub-cat__prod-content">
+                    <h3 class="sub-cat__prod-title">Test Prod</h3>
+                    <div class="sub-cat__prod--stars">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star-half-stroke"></i>
+                      <span>(2342)</span>
+                    </div>
+                    <div class="flex sub-cat__prod-add-to-cart">
+                      <button class="btn btn--cta--side btn--cta" id="addToCart">
+                        Add to cart
+                      </button>
+                      <h4 class="sub-cat__prod--price">1500</h4>
+                    </div>
+                  </div>
+                </div> -->
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script defer type="module" src="/index.js"></script>
+  <script>
+    window.onload = function () {
+      slideOne();
+      slideTwo();
+    };
+
+    let sliderOne = document.getElementById("slider-1");
+    let sliderTwo = document.getElementById("slider-2");
+    let displayValOne = document.getElementById("range1");
+    let displayValTwo = document.getElementById("range2");
+    let minGap = 1000;
+    let sliderTrack = document.querySelector(".range__slider-track");
+    let sliderMaxValue = document.getElementById("slider-1").max;
+
+    function slideOne() {
+      if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderOne.value = parseInt(sliderTwo.value) - minGap;
+      }
+      displayValOne.textContent = sliderOne.value;
+      fillColor();
+    }
+    function slideTwo() {
+      if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+        sliderTwo.value = parseInt(sliderOne.value) + minGap;
+      }
+      displayValTwo.textContent = sliderTwo.value;
+      fillColor();
+    }
+    function fillColor() {
+      percent1 = (sliderOne.value / sliderMaxValue) * 100;
+      percent2 = (sliderTwo.value / sliderMaxValue) * 100;
+      sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
+    }
+
+    const filter6k = document.getElementById('6kfilter');
+
+    filter6k.addEventListener('change',function(e){
+      if(e.target.checked){
+        e.target.checked=false;
+        location.href = `${location.origin}/pages/filter-page/filter-6k-8k.html`;
+      }
+    });
+
+    const filter10k = document.getElementById('10kfilter');
+    filter10k.addEventListener('change',function(e){
+      if(e.target.checked){
+        e.target.checked= false;
+        location.href = `${location.origin}/pages/filter-page/filter-10k-15k.html`;
+      }
+    })
+
+
+
+  </script>
+</html>

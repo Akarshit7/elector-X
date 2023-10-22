@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electo-X | Account Main</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/protect.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="max-container user-profile">
+        <div class="user-profile__layout">
+          <div class="profile-card">
+            <a href="/pages/user-profile/index.html" class="profile-link"
+              >Account Main</a
+            >
+            <a href="/pages/user-profile/new-orders.html" class="profile-link"
+              >New Orders</a
+            >
+            <a
+              href="/pages/user-profile/orders-history.html"
+              class="profile-link"
+              >Orders History</a
+            >
+            <a href="/pages/user-profile/whishlist.html" class="profile-link"
+              >My Wishlist</a
+            >
+            <a href="/pages/user-profile/transactions.html" class="profile-link"
+              >Transactions</a
+            >
+            <a
+              href="/pages/user-profile/profile-settings.html"
+              class="profile-link selected"
+              >Profile Settings</a
+            >
+            <a href="/pages/user-profile/faq.html" class="profile-link"
+              >FAQ's</a
+            >
+            <a href="/" onclick="logout()" class="profile-link"
+              >Logout</a
+            >
+          </div>
+          <div class="user-info-card">
+            <div class="user-info-header">
+              <div class="user-details">
+                <div class="user-name">Profile Settings</div>
+              </div>
+            </div>
+            <hr class="user-info-hr" />
+            <h3 class="delivery-address-heading">
+              <pre>Personal Information           <span class="blue">Edit</span></pre>
+            </h3>
+            <div class="flex p-info__text-box">
+              <input
+                class="p-info__input"
+                type="text"
+                placeholder="Enter Firstname"
+              />
+              <input
+                class="p-info__input"
+                type="text"
+                placeholder="Enter Lastname"
+              />
+            </div>
+            <h4 class="p-info__gender">Your Gender</h4>
+            <div class="flex p-info__gender-radio-btn">
+              <input type="radio" name="gender" id="" /> Male
+              <input type="radio" name="gender" id="" /> Female
+            </div>
+            <h3 class="delivery-address-heading
+            p-info__email">
+              <pre>Email           <span class="blue">Edit</span></pre>
+            </h3>
+            <div class="flex p-info__text-box">
+              <input
+                class="p-info__input"
+                type="text"
+                placeholder="Enter Email"
+              />
+              
+            </div>
+            <h3 class="delivery-address-heading
+            p-info__email">
+              <pre>Phone Number           <span class="blue">Edit</span></pre>
+            </h3>
+            <div class="flex p-info__text-box">
+              <input
+                class="p-info__input"
+                type="text"
+                placeholder="Enter Phone Number"
+              />
+              
+            </div>
+            <button class="btn btn--cta btn--cta--side btn--outline p-info__deactivte">Deactivate Account</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script defer type="module" src="/index.js"></script>
+  <script>
+    function logout(){
+      sessionStorage.removeItem('login');
+    }
+  </script>
+</html>

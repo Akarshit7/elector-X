@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electo-X | Account Main</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="/protect.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="max-container user-profile">
+        <div class="user-profile__layout">
+          <div class="profile-card">
+            <a href="/pages/user-profile/index.html" class="profile-link">Account Main</a>
+            <a href="/pages/user-profile/new-orders.html" class="profile-link">New Orders</a>
+            <a href="/pages/user-profile/orders-history.html" class="profile-link">Orders History</a>
+            <a href="/pages/user-profile/whishlist.html" class="profile-link">My Wishlist</a>
+            <a href="/pages/user-profile/transactions.html" class="profile-link selected">Transactions</a>
+            <a href="/pages/user-profile/profile-settings.html" class="profile-link">Profile Settings</a>
+            <a href="/pages/user-profile/faq.html" class="profile-link"
+              >FAQ's</a
+            >
+            <a href="/" onclick="logout()" class="profile-link"
+              >Logout</a
+            >
+          </div>
+          <div class="user-info-card">
+            <div class="user-info-header">
+             
+              <div class="user-details">
+                <div class="user-name">Transactions</div>
+                
+              </div>
+            </div>
+            <hr class="user-info-hr" />
+            <div class="t-card">
+              <div class="flex">
+                <div class="t-card__images-container">
+                  <div class="item-image-container">
+                    <img
+                      src="/assets/images/display-section/apple-watch.webp"
+                      alt="Item Image"
+                      class="item-image"
+                    />
+                  </div>
+                  <div class="item-image-container">
+                    <img
+                      src="/assets/images/display-section/apple-watch.webp"
+                      alt="Item Image"
+                      class="item-image"
+                    />
+                  </div>
+                  <div class="item-image-container">
+                    <img
+                      src="/assets/images/display-section/apple-watch.webp"
+                      alt="Item Image"
+                      class="item-image"
+                    />
+                  </div>
+                  <div class="item-image-container">
+                    <img
+                      src="/assets/images/display-section/apple-watch.webp"
+                      alt="Item Image"
+                      class="item-image"
+                    />
+                  </div>
+                </div>
+                <div class="t-card__desc">
+                  <p class="desc__items bold">
+                    Dell XPS 13 Laptop, Apple iPhone 13 Pro Max ....
+                  </p>
+                  <p class="desc__total bolder">
+                    <span class="blue">Total</span>: <span class="price">2432432</span>
+                  </p>
+                  <div class="grey">
+                    <p>Payment Method:Card
+                      <br>
+                      Card Number : <span class="bold">XXXXXXXX2345</span>
+                    </p>
+                    <p>
+                      Delivery Address : <span class="bold">
+                        <br>
+                        123 Main Street <br>
+                        Anytown, USA 12345
+                      </span>
+                    </p>
+                    <p>
+                      Phone Number : <span class="bold">1234567890</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="t-card__buttons">
+                <button class="btn btn--cta btn--cta--side">Re-Order</button>
+                <button class="btn btn--cta btn--cta--side btn--outline">Return</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script defer type="module" src="/index.js"></script>
+  <script>
+    function logout(){
+      sessionStorage.removeItem('login');
+    }
+  </script>
+</html>

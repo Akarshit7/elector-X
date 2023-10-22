@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectroX | Cart Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="/protect.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="cart max-container">
+        <div class="categories__title">
+          <h2>Cart:</h2>
+          <p>Home <span> / </span> Cart</p>
+        </div>
+        <div class="cart__layout">
+          <div class="shopping-cart">
+            <h2 class="shopping-cart__title">Shopping Cart</h2>
+            <!-- <div class="cart-item">
+              <div class="item-img-title flex">
+                <div class="item-image-container">
+                  <img
+                    src="../assets/images/display-section/apple-watch.webp"
+                    alt="Item Image"
+                    class="item-image"
+                  />
+                </div>
+                <p> Apple watch 2
+                </p>
+              </div>
+              <div class="item-details">
+                <div>
+                  <div class="quantity-controls">
+                    <button class="quantity-button">-</button>
+                    <span class="quantity">2</span>
+                    <button class="quantity-button">+</button>
+                  </div>
+                  <div class="price-details">
+                    <div class="total-price">$40.00</div>
+                    <div class="price-per-item">$20.00 each</div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn--cta btn--cta--side btn--alert">Remove</button>
+            </div> -->
+      
+            <hr class="checkout-summary__hr" />
+            <p class="free-dilevery">Free Delivery Within 2-3 weeks</p>
+          </div>
+          <div class="checkout-summary">
+            <div class="checkout-summary__input flex">
+              <input
+                type="text"
+                placeholder="Apply Coupon"
+                class="coupon-input"
+              />
+              <button class="btn btn--cta btn--cta--side">Apply</button>
+            </div>
+            <div class="price-details">
+              <p><span>Total:</span> <span>$200.00</span></p>
+              <p><span>Discount:</span> <span>$20.00</span></p>
+              <p><span>Tax:</span> <span>$5.00</span></p>
+              <p><span>Total:</span> <span>$185.00</span></p>
+            </div>
+            <hr class="checkout-summary__hr" />
+            <div class="payment-icons">
+              <img src="/assets/images/payment/visa_logo.jpg" alt="Visa" class="payment-icon" />
+              <img
+                src="/assets/images/payment/mastercard_logo.png"
+                alt="Mastercard"
+                class="payment-icon"
+              />
+              <img
+                src="/assets/images/payment/american_express.png"
+                alt="American Express"
+                class="payment-icon"
+              />
+              <img src="/assets/images/payment/paypal_logo.png" alt="PayPal" class="payment-icon" />
+            </div>
+            <button class="btn btn--cta btn--cta--side btn--payment"><a href="/pages/checkout.html">Checkout</a></button>
+            <button class="btn btn--cta btn--cta--side btn--outline btn--payment">Installments</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" defer src="/index.js"></script>
+  </body>
+</html>
